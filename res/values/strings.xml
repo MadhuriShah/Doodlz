@@ -24,5 +24,6 @@
     <string name="title_color_dialog">Choose Color</string>
     <string name="title_line_width_dialog">Choose Line Width</string>
     <string name="backgroundColor">Background Color</string>
+       <string name="backgroundImage">Background Image</string>
 
 </resources>
