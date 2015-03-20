@@ -21,7 +21,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-// the main screen that is painted
+//the main screen that is painted
 public class DoodleView extends View {
 	// used to determine whether user moved a finger enough to draw again
 	private static final float TOUCH_TOLERANCE = 10;
@@ -61,7 +61,7 @@ public class DoodleView extends View {
 		bitmap = Bitmap.createBitmap(getWidth(), getHeight(),
 				Bitmap.Config.ARGB_8888);
 		bitmapCanvas = new Canvas(bitmap);
-		bitmap.eraseColor(Color.WHITE); // erase the Bitmap with white
+		bitmap.eraseColor(backColor); // erase the Bitmap with white
 	}
 
 	// clear the painting
@@ -80,10 +80,12 @@ public class DoodleView extends View {
 	public void setBackgroundColor(int color) {
 		backColor = color;
 	}
+
 	// return the painted line's color
 	public int getDrawingColor() {
 		return paintLine.getColor();
 	}
+
 	public int getBackgroundColor() {
 		return backColor;
 	}

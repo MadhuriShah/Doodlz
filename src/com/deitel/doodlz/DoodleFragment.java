@@ -1,7 +1,6 @@
 // DoodleFragment.java
 // Fragment in which the DoodleView is displayed
 package com.deitel.doodlz;
-
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Color;
@@ -158,16 +157,16 @@ public class DoodleFragment extends Fragment
             colorDialog.show(getFragmentManager(), "color dialog");
             return true; // consume the menu event
          case R.id.backgroundColor:
-             BackColorDialogFragment colorDialog1 = new BackColorDialogFragment();      
-             colorDialog1.show(getFragmentManager(), "color dialog");
-             return true; 
+             BackColorDialogFragment ColorDialog1 = new BackColorDialogFragment();      
+             ColorDialog1.show(getFragmentManager(), "color dialog");
+             return true; // consume the menu event
          case R.id.lineWidth:
             LineWidthDialogFragment widthdialog = 
                new LineWidthDialogFragment();      
             widthdialog.show(getFragmentManager(), "line width dialog");
             return true; // consume the menu event
          case R.id.eraser:
-            doodleView.setDrawingColor(Color.WHITE); // line color white
+            doodleView.setDrawingColor(doodleView.getBackgroundColor()); // line color white
             return true; // consume the menu event
          case R.id.clear:
             confirmErase(); // confirm before erasing image
@@ -195,19 +194,3 @@ public class DoodleFragment extends Fragment
       dialogOnScreen = visible;  
    }
 }
-
-/**************************************************************************
- * (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               * 
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     * 
- * best efforts in preparing the book. These efforts include the          * 
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       * 
- * no warranty of any kind, expressed or implied, with regard to these    * 
- * programs or to the documentation contained in these books. The authors * 
- * and publisher shall not be liable in any event for incidental or       * 
- * consequential damages in connection with, or arising out of, the       * 
- * furnishing, performance, or use of these programs.                     *
- **************************************************************************/
-

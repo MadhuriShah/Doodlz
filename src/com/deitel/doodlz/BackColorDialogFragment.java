@@ -1,12 +1,6 @@
-
+//BackColorDialogFragment.java
 // Allows user to set the drawing color on the DoodleView
 package com.deitel.doodlz;
-
-//BackgroundColorDialogFragment.java
-//Allows user to set the drawing color on the DoodleView
-
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
